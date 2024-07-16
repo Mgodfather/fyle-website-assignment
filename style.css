@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Define variables */
+    --primary-color: #FF3147;
+    --secondary-color: #6c757d;
+    --background: #FAFAFA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+html,
+body {
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+
+/* -------------------------hero section--------------------------- */
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+    padding: 10rem 0;
+}
+
+.title-box {
+    width: 614px;
+}
+
+.title-box h3 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.title-box h1 {
+    font-size: 6rem;
+    color: black;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 1.8rem 0;
+}
+
+.title-box p {
+    font-size: 1.6rem;
+    color: black;
+    font-weight: 400;
+    padding: 2.5rem 0 6rem 0;
+}
+
+.title-box .btn {
+    width: 160px;
+    height: 50px;
+    font-size: 1.4rem;
+    color: white;
+    background-color: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 2px;
+
+}
+
+.title-img .hero-img {
+    background-image: url(images/img1..png);
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    width: 487px;
+    height: 737px;
+}
+
+/* -----------------------------form pop up section start-------------------------- */
+
+.form-overlay{
+    background-color: #F1F1F1;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease-in;
+}
+
+.showOverlay{
+    z-index: 1;
+    opacity: 1;
+}
+
+.form-container{
+    height: 400px;
+    width: 450px;
+    background-color: white;
+    border: 1px solid #F1F1F1;
+    border-radius: 5px;
+    position: absolute;
+    left: 50%;
+    top: -50%;
+    transition: all 0.9s ease-in-out;
+    transform: translate(-50%, -50%);
+    padding: 30px 32px;
+}
+
+.showForm{
+    top: 50%;
+}
+
+.form-container h2{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+.input-group{
+    margin-top: 50px;
+    position: relative;
+}
+
+[type="email"]{
+    border: none;
+}
+
+input{
+    font-size: 1.4rem;
+    width: 100%;
+    padding-bottom: 1rem;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #6F718F99;
+}
+
+
+label {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0.5rem 0;
+    cursor: text;
+    font-size: 1.4rem;
+    color: #6F718F99;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+input:focus~label,
+input:valid~label{
+    top: -30px;
+    font-size: 1.2rem;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.check-box{
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+
+}
+.check-box input{
+    align-self: flex-start;
+    margin-top: 0.4rem ;
+    accent-color: var(--primary-color);
+    height: 14px;
+    width: 14px;
+
+} 
+.check-box h4{
+    font-size: 1.4rem;
+    color: #616678;
+} 
+
+form button {
+    background-color: var(--primary-color);
+    width: 100%;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border: none;
+    padding: 15px 0;
+    border-radius: 5px;
+    margin: 22px 0;
+    cursor: pointer;
+}
+
+/* -----------------------------form pop up section end-------------------------- */
+
+/* ------------------------------------WHAT WE DO------------------------------ */
+
+#we-do-sec {
+    min-height: 1030px;
+    width: 100%;
+    background-color: var(--background);
+    padding: 10rem 0;
+}
+
+.heading-container {
+    display: flex;
+    align-items: center;
+    gap: 14.5rem;
+    justify-content: center;
+
+}
+
+.heading-container .services-sec {
+    width: 442px;
+}
+
+.heading-container .services-sec h4 {
+    color: var(--primary-color);
+    font-size: 2.4rem;
+    font-weight: 600px;
+}
+
+.heading-container .services-sec h1 {
+    color: black;
+    font-size: 4.5rem;
+    font-weight: 700px;
+}
+
+.para-sec {
+    width: 584px;
+}
+
+.heading-container .para-sec p {
+    font-size: 1.6rem;
+}
+
+/*<==============================slider start===============================>*/
+
+.slide-container {
+    max-width: 1170px;
+    max-height: 526px;
+    margin: 6rem auto 4rem auto;
+    overflow: hidden;
+}
+
+.card-list {
+    display: flex;
+    gap: 3rem;
+    transition: transform 1s cubic-bezier(0.69, -0.3, 0.4, 1.45);
+}
+
+.card {
+    height: 526px;
+    min-width: 370px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .overlay {
+    width: 370px;
+    height: 526px;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: -100%;
+    text-align: center;
+    padding: 20px;
+    transition: bottom 0.3s ease, opacity 0.3s ease;
+    border-radius: 5px;
+}
+
+.overlay{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+}
+.overlay h1{
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: white;
+    margin-top: 36px;
+}
+
+.overlay p{
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: white;
+    margin: 21px 0 69px 0;
+}
+
+.overlay button{
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    background-color: #F4F4F4;
+    border: none;
+    padding: 1.5rem;
+    width: 185px;
+    cursor: pointer;
+}
+.overlay img{
+    margin-left: 1.5rem;
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.card:hover .overlay {
+    bottom: 0;
+    opacity: 1;
+}
+
+
+.dots {
+    display: flex;
+    justify-content: flex-start;
+    width: 1175px;
+    align-items: center;
+    margin: 4rem auto 0 auto;
+    gap: 2rem;
+}
+.dot {
+    cursor: pointer;
+     background-image: url(/images/dot.png);
+     height: 8px;
+     width: 8px;
+}
+.active-dot{
+    background-image: url(/images/3.png);
+    height: 30px;
+    width: 30px;
+}
+
+/*<==============================slider end===============================>*/
+
+
+
+/* -----------------------------Why We Are Best---------------------- */
+/* -------------------------------WHY CHOOSE US--------------------- */
+
+.why-us-sec {
+    text-align: center;
+    padding: 10rem 0 5rem 0;
+}
+
+
+.why-us-sec h4 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #FF3147;
+    text-transform: uppercase;
+}
+
+.why-us-sec h1 {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: black;
+    padding: 4rem 0 6rem 0;
+}
+
+.why-best-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1175px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.we-best h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 2rem 0 1.5rem 0;
+}
+
+.we-best p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 2rem 0 1.5rem 0;
+}
+
+/* -----------------------------our project------------------------ */
+
+.project-sec h1 {
+    padding-bottom: 6rem;
+}
+
+.food-img-sec {
+    width: 1175px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.food-img-sec img {
+    width: 770px;
+    height: 567px;
+}
+
+.food-img-sec aside {
+    height: 567px;
+    width: 370px;
+    background-color: #F6F6F6;
+    cursor: pointer;
+}
+
+.food-img-sec aside .aside-content {
+    padding: 33px 30px;
+    text-align: left;
+    height: 189px;
+    width: 370px;
+}
+
+.active {
+    background-color: var(--primary-color);
+}
+
+.aside-content h5 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.aside-content p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding-top: 1.5rem;
+}
+
+/* ---------------------------------Expert growth------------------------------- */
+
+
+.growth-content {
+    margin-top: 2rem;
+    min-height: 602px;
+    width: 100%;
+    background-color: var(--background);
+    text-align: center;
+}
+
+.growth-content h3 {
+    padding: 10rem 0 4rem 0;
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    /* height: 0px; */
+}
+
+.growth-content h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    height: 45px;
+}
+
+.award-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1175px;
+    margin: 0 auto;
+    padding: 6rem 0 10rem 0;
+}
+
+.award-box {
+    height: 233px;
+    width: 270px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.9rem;
+}
+
+.award-box h1 {
+    margin: 1rem 0 4rem 0;
+    font-size: 6rem;
+    font-weight: 300;
+}
+
+.award-box h5 {
+    font-size: 2rem;
+    font-weight: 300;
+}
+
+.award-box:hover {
+    box-shadow: #672C2C1F 3px 6px 20px;
+    transition: all 0.1s ease-in;
+}
+
+/* -----------------------------------feedback section----------------------------- */
+
+.feedback-sec {
+    margin: 10rem auto;
+    text-align: center;
+    max-width: 831px;
+    position: relative;
+}
+
+.feedback-sec h4 {
+    color: var(--primary-color);
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-transform: uppercase
+}
+
+.feedback-sec h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 4rem 0 7.6rem 0;
+}
+
+.feedback-sec p {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 2.4rem;
+    
+}
+.feedback-sec .comma{
+    position: absolute;
+    left: -20px;
+    top: 203px;
+    z-index: -1;
+}
+.feedback-sec h5 {
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    text-align: left;
+}
+
+.feedback-sec h5 span {
+    color: #808080;
+    font-weight: 400;
+}
+
+/*------------------------- footer section-------------------- */
+
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 310px;
+    background-color: var(--primary-color);
+}
